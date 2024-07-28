@@ -3,47 +3,90 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="Registration form" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .row {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <form>
+    <form id="registrationForm">
+        <div class = row>
+            <label for="name">Full name:</label>
+            <input type="text" id="name" name="name" placeholder="name" ><br>
+        </div>
+        <div class = row>
+            <label for="email">Email id:</label>
+            <input type="email" id="email" name="email" placeholder="raju@gmail.com" ><br>
+        </div>
+        <div class="row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" maxlength="20" ><br>
+        </div>
+        <div class="row">
+        <label for="confirm">Confirm password:</label>
+        <input type="password" id="confirm" name="confirm" maxlength="20" ><br>
+        </div>
+        <div class="row">
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        </div>
+        <p id="error-message" style="color: red; display: none;">You must be at least 18 years old.</p><br>
+         
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" >
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
+        </select><br>
+    
+        <h4>Subscription</h4>
+        <label for="free">Free</label>
+        <input type="radio" id="free" name="subscription" value="free" >
+        <label for="basic">Basic</label>
+        <input type="radio" id="basic" name="subscription" value="basic" >
+        <label for="premium">Premium</label>
+        <input type="radio" id="premium" name="subscription" value="premium" ><br>
 
-        <label for="name">Full name:<input type="text" placeholder="name">
-            <br>
-            <br> <label for="email">Email id:<input type="email" placeholder="raju@gmail.com"></label>
-            <label for="password"> password: <input type="password"></label>
-            <label for="confirm">confirm password <input type="password"></label><br>
-            <br>
-            <br<label for="Date">Date of birth :<input type="date">
-        </label>
-        <br>
-        <br>
-        <label for="Gender">Gender:</label>
-        <select>
-            <option value="male">male</option>
-            <option value="female">female</option>
-            <option value="non-binary">non-binary></option>
-        </select>
-        <br>
-        <h4>subscription</h4>
-        <label for="Free">Free<input type="radio"></label>
-        <label for="">Basic<input type="radio"></label>
-        <label for="Premium">Premium <input type="radio"></label>
-        <h4>hobbies</h4>
-        <label for="reading">reading<input type="checkbox"></label>
-        <label for="coding">coding<input type="checkbox"></label>
-        <label for="sports">sports<input type="checkbox"></label>
-        <br>
-        <br>
-        <label for="upload picture">upload picture <br><input type="image" width="30%" height="100px" </label><br>
-            <br>
+        <h4>Hobbies</h4>
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="coding" name="hobbies" value="coding">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="sports" name="hobbies" value="sports"><br><br>
 
+        <h4>Upload Image</h4>
+        <input type="file" id="imageUpload" name="imageUpload" accept=".jpg,.png" ><br><br>
 
-            <input type="submit">
+        <input type="submit" value="Submit">
     </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const dob = new Date(document.getElementById('dob').value);
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            // const monthDifference = today.getMonth() - dob.getMonth();
+            // const dayDifference = today.getDate() - dob.getDate();
+
+            // if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+            //     age--;
+            // }
+
+            if (age < 18) {
+                event.preventDefault();
+                document.getElementById('error-message').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 
