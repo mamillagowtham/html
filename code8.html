@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback form</title>
+    <style>
+      div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <div>
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="email">Enter Email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label for="comment">comment</label>
+        <textarea
+          width="50%"
+          height="50%"
+          id="comment"
+          placeholder="enter your feedback here"></textarea>
+      </div>
+      <div>
+        <label for="rangeInput">Select (0 to 10):</label>
+        <input
+          type="range"
+          id="rangeInput"
+          name="rangeInput"
+          min="0"
+          max="10"
+          oninput="updateValue(this.value)"
+        />
+        <span id="rangeValue">5</span>
+
+        <script>
+          function updateValue(value) {
+            document.getElementById("rangeValue").textContent = value;
+          }
+        </script>
+      </div>
+      <div id="feedback">
+        <p><b>feedback</b></p>
+        <label for="compliment">compliment </label>
+        <input type="radio" id="compliment" name="compliment" /><br />
+        <label for="complaint">complaint</label>
+        <input type="radio" id="complaint" name="complaint" /><br />
+        <label for="suggestion">suggestion</label>
+        <input type="radio" id="suggestion" name="suggestion" />
+      </div>
+      <div>
+        <input type="checkbox" id="agree" name="agree" required />
+        <label for="agree"><em>I agree the feedback-policy.</em></label>
+      </div>
+      <div>
+        <a href="#feedback">feedback</a>
+        <a href=""></a>
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
