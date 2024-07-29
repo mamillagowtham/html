@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+</head>
+<body>
+   <div style="display: flex; justify-content: center;">
+     <div  style="margin-right: 20px;">
+       <img src="https://images.unsplash.com/photo-1700893417216-44e85c0a77d7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2luZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+        width="230px" ;"><br>
+       <label style="color: rgba(97, 76, 89, 0.851);">Fashion tips</label><br>
+        <h2>What curling are the best ones</h2>
+        <label style="color: rgba(97, 76, 89, 0.851);">well would you ever try this, the taste was good</label><br>
+        <u><i>Read More</i></u>
+     </div>
+
+     <div style="margin-right: 20px;">
+        <img src="https://images.unsplash.com/photo-1700893417216-44e85c0a77d7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2luZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+        width="230px"><br>
+        <label style="color: rgba(97, 76, 89, 0.851);"">Fashion tips</label><br>
+        <h2>What curling are the best ones</h2>
+        <label  style="color: rgba(97, 76, 89, 0.851);">Winter season this type of blankets are preferable</label><br>
+        <u><i>Read More</i></u>
+     </div> 
+     <div>
+     <img src="https://images.unsplash.com/photo-1700893417216-44e85c0a77d7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2luZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+     width="230px" ;"><br>
+     <label style="color: rgba(97, 76, 89, 0.851);">Fashion tips</label><br>
+     <h2>What curling are the best ones</h2>
+     <label style="color: rgba(97, 76, 89, 0.851);">consectuer displaying elit.Laborum fuga incident labaoriosam volupatis iure,delectus.</label><br>
+     <u><i>Read More</i></u>
+
+     </div>
+    </div>
+   
+
+</body>
+</html>
