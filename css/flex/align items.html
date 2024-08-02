@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>align items</title>
+    </head>
+    <style>
+        .box{
+            background-color: skyblue;
+            padding: 20px;
+            border: 5px solid red;
+            display: flex;
+            flex-direction: column-reverse;
+            height: 500px;
+        }
+        .box > div
+        {
+            padding: 50px;
+            height: 30px;
+            font-size: medium;
+            
+
+        }
+        .box >div:nth-child(1)
+        {
+            background-color: green
+        }
+        .box >div:nth-child(2)
+        {
+            background-color: orange;
+        }
+       .box >div:nth-child(3)
+       {
+        background-color: violet;
+       }
+    </style>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>
