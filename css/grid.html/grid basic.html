@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>grid.basics</title>
+    </head>
+    <style>
+
+        #container
+        {
+         background-color: white;
+         display: grid;
+         grid-template-columns: 100px 100px;
+         grid-template-rows: 100px 100px 100px;
+         column-gap: 10px;
+
+         }
+        
+
+         #container >p:nth-child(5)
+        {
+             grid-area: 1/2/2/3;  /*red colour box changed positon into 1st line 2ndcolumn  (first preference row then column)*/
+        }
+       #container >p:nth-child(1)
+     {
+        background-color: orange;
+        /* grid-area: or; */
+     }
+      #container > p{
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+       #container >p:nth-child(2)
+       {
+        background-color: purple;
+        /* grid-area: pu; */
+       }
+       #container >p:nth-child(3)
+       {
+        background-color: brown;
+        /* grid-area: br; */
+       }
+       #container >p:nth-child(4)
+       {
+        background-color: blue;
+        /* grid-area: blu; */
+       }
+       #container >p:nth-child(5)
+       {
+        background-color: red;
+        /* grid-area: re; */
+       }
+       #container >p:nth-child(6)
+       {
+        background-color: green;
+        /* grid-area: bl; */
+       }
+    </style>
+    <head>
+        <body style="background-color: skyblue;">
+            <div id="container">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+
+            </div>
+        </body>
+    </head>
+</html>
