@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>absolute position</title>
+        <style>
+            div
+            {
+                height: 50px;
+                width: 50px;
+                padding: 5px;
+                font-size: medium;
+            }
+            #blue
+            {
+                background-color: blue;   /*when ever you give absolute position to the particular element, that element will move at certain
+                                             distance which you given, it will goes ups,and remaining elements will occupy absolute position*/
+                position: absolute;
+                left: 35px;
+
+            }
+            #teal
+            {
+                background-color: teal;
+            }
+            #orange
+            {
+                background-color: orange;   /*the element will goes only one bit up */
+                position:absolute;
+                left: 110px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="blue">Box1</div>
+        <div  id="teal">Box2</div>
+        <div id="orange">Box3</div>
+    </body>
+</html>
